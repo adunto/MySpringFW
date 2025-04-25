@@ -24,6 +24,7 @@ public class StudentSpringTest {
 	@Resource(name="gradeService")
 	GradeService service;
 	
+	// gradeService 테스트
 	@Test
 	void testService() {
 		assertNotNull(service);
@@ -36,6 +37,7 @@ public class StudentSpringTest {
 		}
 	}
 	
+	// Course 테스트
 	@Test @Disabled
 	void testCourse() {
 		assertNotNull(course);
