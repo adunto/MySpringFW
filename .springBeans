@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/resources/hello-di.xml</config>
 		<config>src/main/resources/mylab-student-di.xml</config>
+		<config>src/main/resources/mylab-order-di.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Setter injection SpringBean 선언 -->
+	<bean id="product1" class="mylab.order.di.xml.Product">
+		<property name="id" value="P1000" />
+		<property name="name" value="블라인드" />
+		<property name="price" value="50000" />
+	</bean>
+	
+	<!-- Constructor injection SpringBean 선언 -->
+	<!-- 오버로딩 생성자 호출 -->
+	<bean id="product2" class="mylab.order.di.xml.Product">
+		<constructor-arg name="id" value="P1001" />
+		<constructor-arg name="name" value="충전기" />
+		<constructor-arg name="price" value="23000" />
+	</bean>
+	
+	<!-- ShoppingCart 클래스를 Bean으로 설정 -->
+	<bean id="shoppingCart" class="mylab.order.di.xml.ShoppingCart" >
+		<property name="products">
+			<list>
+				<ref bean="product1"/>
+				<ref bean="product2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- OrderService 클래스를 Bean으로 설정 -->
+	<bean id="orderService" class="mylab.order.di.xml.OrderService">
+		<property name="shoppingCart" ref="shoppingCart" />
+	</bean>
+</beans>
