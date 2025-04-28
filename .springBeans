@@ -11,6 +11,7 @@
 		<config>src/main/resources/mylab-student-di.xml</config>
 		<config>src/main/resources/mylab-order-di.xml</config>
 		<config>src/main/resources/mylab-user-di.xml</config>
+		<config>src/main/resources/spring-beans-mybatis.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
