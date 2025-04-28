@@ -1,5 +1,11 @@
 package myspring.user.vo;
 
+/*
+ * Class(UserVO 클래스) <=> Table(users 테이블)
+ * Object <=> Row(Record)
+ * Field <=> Column
+ */
+
 public class UserVO {
 
 	private Long id;
