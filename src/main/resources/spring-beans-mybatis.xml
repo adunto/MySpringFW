@@ -46,4 +46,6 @@
 		<property name="basePackage" value="**.dao.mapper"/>
 		<property name="sqlSessionTemplateBeanName" value="sqlSession" /> 
 	</bean>
+	
+	
 </beans>
